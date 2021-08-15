@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <form action="{{ url_for('process')}}" method = "POST">
+            <p>numProcessors <input type = "number" name = "numProcessors" /></p>
+            <p>LowerLimit <input type = "number" name = "lowerLimit" /></p>
+            <p>UpperLimit <input type = "number" name = "upperLimit" /></p>
+            <p>N <input type = "number" name = "n" /></p>
+            <p>M <input type = "number" name = "m" /></p>
+            <p><input type = "submit" value = "Submit" /></p>
+        </form>
+        
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <body>
+    
+        <!-- <p>{{matIn1}} </p>
+        <p> {{matIn2}} </p> -->
+        <p>{{timeForExecPar}}</p>
+        <!-- <p>{{matOutPar}} </p>
+        <p>{{matOutSeq}} </p> -->
+        <p>{{result }} </p>
+        <table>
+            {% for row in matOutPar %}
+            <tr>
+                {% for val in row %}
+                <td>{{val}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+            </table>
+       
+    </body>
+</html>

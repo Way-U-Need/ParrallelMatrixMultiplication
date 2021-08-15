@@ -311,15 +311,14 @@ def runParallelMatMul(matIn1, matIn2, sharedMemArr, numProcessors):
 
 	return timeForExecPar, matOut
 
-def main(argv):
+def parrallel_matrix_multiplication(lowerLimit, upperLimit, n, m ):
 	"""
 	Main function to interface with the other functions available in the program
 	input: argv, the inputs given via the command line
 	returns: None
 	"""
 	
-	numProcessors, lowerLimit, upperLimit, n, m = get_args(argv)
-
+	numProcessors, lowerLimit, upperLimit, n, m = 4,lowerLimit, upperLimit, n, m 
 	matIn1 = np.random.randint(low = lowerLimit,high = upperLimit, size = (n,m))
 	matIn2 = np.random.randint(low = lowerLimit,high = upperLimit, size = (n,m))
 
@@ -340,14 +339,11 @@ def main(argv):
 	print(matOutPar)
 	print("\n"*2,"Hence, with {0} cores, parallel algorithm runs faster by {1}".format(numProcessors, float(timeForExecSeq/timeForExecPar)))
 	print("\n"*2)
-
+	result=float(timeForExecSeq/timeForExecPar)
+	return matIn1, matIn2,timeForExecPar, matOutPar,matOutSeq, result
 	## To check if multiplication is correct
 	# start = time.time()
 	# np_mult = np.dot(matIn1,mat_trp(matIn2))
 	# end = time.time()
 	# print((end-start)*1000)
 	# print(np_mult == matOutPar)
-
-if __name__ == "__main__": 
-	argv = sys.argv[1:]
-	main(argv)
