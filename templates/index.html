@@ -1,13 +1,43 @@
 <html>
-    <body>
-        <form action="{{ url_for('process')}}" method = "POST">
-            <p>numProcessors <input type = "number" name = "numProcessors" /></p>
-            <p>LowerLimit <input type = "number" name = "lowerLimit" /></p>
-            <p>UpperLimit <input type = "number" name = "upperLimit" /></p>
-            <p>N <input type = "number" name = "n" /></p>
-            <p>M <input type = "number" name = "m" /></p>
-            <p><input type = "submit" value = "Submit" /></p>
-        </form>
+  <body style="text-align: center">
+    <center>
+        <br/>
         
-    </body>
+        <h2 style="color: purple">Cloud Assignment 3.3 By Megha Brahmbhatt</h2>
+ 
+      <form action="{{ url_for('process')}}" method="POST">
+        
+        <table>
+            <tr><td> Number of Processors: : </td><td><input
+                type="number"
+                max="4"
+                maxlength="4"
+                name="numProcessors"
+                required
+              /></td></tr>
+        <tr><td>LowerLimit : </td><td><input type="number" name="lowerLimit" required /></td></tr>
+        <tr><td>UpperLimit : </td><td><input type="number" name="upperLimit" required /></td></tr>
+        <tr><td>N :</td><td><input type="number" name="n" required /></td></tr>
+        <tr><td>M :</td><td><input type="number" name="m" required /></td></tr>
+        <tr><td><input type="submit" value="Submit" /></td></tr>
+    </table>
+      </form>
+      <br/>
+      <p style=" font-weight: bold; ">
+        <h3 style="color: firebrick;">numProcessors:</h3> Number of Processors you want to be used, By default all
+        the processors available will be used. If more than available processors
+        are given, default processors will be used.
+        <br />
+        <h3 style="color: firebrick;">lowerLimit:</h3> The lower limit integer to which the generated input matrice
+        will adhere to.
+        <br />
+        <h3 style="color: firebrick;">upperLimit:</h3> The upper limit integer to which the generated input matrice
+        will adhere to.
+        <br />
+        <h3 style="color: firebrick;">n:</h3> Number of rows in input matrices.
+        <br />
+        <h3 style="color: firebrick;">m:</h3> Number of columns in input matrices.
+      </p>
+    </center>
+  </body>
 </html>

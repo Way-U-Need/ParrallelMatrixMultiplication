@@ -1,13 +1,13 @@
 <html>
-    <body>
-    
-        <!-- <p>{{matIn1}} </p>
-        <p> {{matIn2}} </p> -->
-        <p>{{timeForExecPar}}</p>
+    <body style="text-align: center;">
+        <br/>
+        <br/>
+        <h2 style="color: purple">Cloud Assignment 3.3 By Megha Brahmbhatt</h2>
+        <h3>Time taken for parallel multiplication: <i style="color: darkblue;">{{timeForExecPar}} </i style="color: seagreen;">ms</h3>
         <!-- <p>{{matOutPar}} </p>
         <p>{{matOutSeq}} </p> -->
-        <p>{{result }} </p>
-        <table>
+        <h3>Hence, with <i style="color: darkblue;">{{numProcessors}}</i style="color: darkblue;"> cores, parallel algorithm runs faster by <i style="color: seagreen;">{{result}} ms</strong></h3>
+        <table style="text-align: center;">
             {% for row in matOutPar %}
             <tr>
                 {% for val in row %}

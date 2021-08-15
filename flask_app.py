@@ -18,7 +18,7 @@ def process():
         print(lowerLimit, upperLimit, n, m)
         matIn1, matIn2,timeForExecPar, matOutPar,matOutSeq, result=mp_mat_mult.parrallel_matrix_multiplication(lowerLimit, upperLimit, n, m )
         print(result)
-        return render_template('data.html',matIn1=matIn1, matIn2=matIn2,timeForExecPar=timeForExecPar, 
+        return render_template('data.html',numProcessors=numProcessors,matIn1=matIn1, matIn2=matIn2,timeForExecPar=timeForExecPar, 
                                         matOutPar=matOutPar,matOutSeq=matOutSeq,result=result)
 
 # app.run(host='0.0.0.0', port=80, threaded=True)
